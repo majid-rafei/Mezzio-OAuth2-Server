@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="66dd9428-6a6f-4e19-9e70-341eb103305d" name="MyMezzio">
+        <fileTransfer rootFolder="/var/www/mezzio" accessType="SFTP" host="192.168.10.190" port="22" sshConfigId="ace47e0c-1fa6-4ea1-be85-61a9670144a1" sshConfig="majidr@192.168.10.190:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
