@@ -1,5 +1,5 @@
 # Mezzio-OAuth2-Authorization-Authentication-Server
-This is a basic Oauth2 authorization/authentication server implemented using Mezzio.
+This is a basic OAuth2 authorization/authentication server implemented using Mezzio.
 
 I have found some problems with Mezzio prepared sql queries used to create tables needed by OAuth2. In this project we have overcome tricks in creating new Mezzio/OAuth2 server.
 
