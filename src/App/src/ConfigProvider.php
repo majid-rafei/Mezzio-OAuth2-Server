@@ -9,6 +9,7 @@ use App\Handler\PingHandler;
 use App\Middleware\Factory\OAuthMiddlewareFactory;
 use App\Middleware\OAuthMiddleware;
 use Mezzio\Authentication\AuthenticationInterface;
+use Mezzio\Authentication\AuthenticationMiddleware;
 use Mezzio\Authentication\OAuth2\OAuth2Adapter;
 
 /**
@@ -27,9 +28,9 @@ class ConfigProvider
     public function __invoke(): array
     {
         return [
-            'routes' => $this->getRoutes(),
             'dependencies' => $this->getDependencies(),
             'templates'    => $this->getTemplates(),
+            'routes' => $this->getRoutes(),
         ];
     }
 
@@ -45,8 +46,11 @@ class ConfigProvider
             [
                 'path'            => '/api/ping',
                 'name'            => 'api.ping',
-                'middleware'      => [PingHandler::class],
-                'allowed_methods' => ['GET'],
+                'middleware'      => [
+                    AuthenticationMiddleware::class,
+                    PingHandler::class,
+                ],
+                'allowed_methods' => ['POST'],
             ],
 //            [
 //                'path'            => '/user/login',
@@ -83,11 +87,11 @@ class ConfigProvider
             'aliases' => [
                 AuthenticationInterface::class => OAuth2Adapter::class,
             ],
-            'delegators' => [
-                \Mezzio\Application::class => [
-                    \Mezzio\Container\ApplicationConfigInjectionDelegator::class,
-                ]
-            ],
+//            'delegators' => [
+//                \Mezzio\Application::class => [
+//                    \Mezzio\Container\ApplicationConfigInjectionDelegator::class,
+//                ]
+//            ],
         ];
     }
 

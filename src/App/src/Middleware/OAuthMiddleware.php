@@ -24,9 +24,9 @@ class OAuthMiddleware implements MiddlewareInterface
         // Assume a middleware handled the authentication check and
         // populates the user object, which also implements the
         // OAuth2 UserEntityInterface
+
         $user = $request->getAttribute(UserInterface::class);
 
-        var_dump($request, $user); exit();
         // Assume the SessionMiddleware handles and populates a session
         // container
         $session = $request->getAttribute('session');

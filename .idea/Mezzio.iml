@@ -100,6 +100,9 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-factory" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-server-middleware" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-server-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mezzio/mezzio-session" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/dflydev/fig-cookies" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mezzio/mezzio-session-ext" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

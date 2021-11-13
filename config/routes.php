@@ -48,16 +48,4 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
      * }
      */
     $app->post('/oauth2/token', OAuth2\TokenEndpointHandler::class);
-    $app->get('/oauth2/authorize', [
-//    SessionMiddleware::class,
-
-//        OAuth2\AuthorizationMiddleware::class,
-
-        // The following middleware is provided by your application (see below):
-//        App\Middleware\OAuthMiddleware::class,
-
-        Mezzio\Authentication\AuthenticationMiddleware::class,
-
-//        OAuth2\AuthorizationHandler::class
-    ], 'oauth2.authorize');
 };
