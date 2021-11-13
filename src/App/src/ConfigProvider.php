@@ -52,23 +52,6 @@ class ConfigProvider
                 ],
                 'allowed_methods' => ['POST'],
             ],
-//            [
-//                'path'            => '/user/login',
-//                'name'            => 'login',
-//                'middleware'      => [
-//                    \Usr\Handler\LoginHandler::class,
-//                ],
-//                'allowed_methods' => ['GET'],
-//            ],
-//            [
-//                'path'            => '/user/verifySejam',
-//                'name'            => 'verifySejam',
-//                'middleware'      => [
-//                    \Usr\Handler\SejamHandler::class,
-////                    \User\Middleware\RequestExceptionMiddleware::class,
-//                ],
-//                'allowed_methods' => ['POST'],
-//            ],
         ];
     }
 
