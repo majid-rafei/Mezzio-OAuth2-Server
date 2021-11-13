@@ -42,7 +42,7 @@ use Mezzio\Session\SessionMiddleware;
 return static function (Application $app, MiddlewareFactory $factory, ContainerInterface $container): void {
     /**
      * Step 1: Authorization: {
-     *   route: '/oauth' -> Base on grant_type, send username, password, and authorization grant type
+     *   route: '/oauth2/token' -> Base on grant_type, send username, password, and authorization grant type
      *                      to this route with a GET or POST method to do an authentication
      *                      and go to the next step,
      * }
