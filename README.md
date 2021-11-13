@@ -3,7 +3,7 @@ This is a basic OAuth2 authorization/authentication server implemented using Mez
 
 I have found some problems with Mezzio prepared sql queries used to create tables needed by OAuth2. In this project we have overcome tricks in creating new Mezzio/OAuth2 server.
 
-**OAuth Sql Preparation:**
+**OAuth2 Sql Preparation:**
 Please use these queries in order to create and prepare tables needed in OAuth2:
 ```sql
 --
