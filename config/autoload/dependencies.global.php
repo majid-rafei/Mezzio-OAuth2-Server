@@ -22,10 +22,10 @@ return [
         'factories' => [
             // Fully\Qualified\ClassName::class => Fully\Qualified\FactoryName::class,
         ],
-//        'delegators' => [
-//            \Mezzio\Application::class => [
-//                \Mezzio\Container\ApplicationConfigInjectionDelegator::class,
-//            ]
-//        ],
+        'delegators' => [
+            \Mezzio\Application::class => [
+                \Mezzio\Container\ApplicationConfigInjectionDelegator::class,
+            ]
+        ],
     ],
 ];

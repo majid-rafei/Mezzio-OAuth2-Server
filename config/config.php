@@ -46,6 +46,15 @@ $aggregator = new ConfigAggregator([
     new PhpFileProvider(realpath(__DIR__) . '/autoload/{{,*.}global,{,*.}local}.php'),
     // Load development config if it exists
     new PhpFileProvider(realpath(__DIR__) . '/development.config.php'),
+    /**
+     * OAuth2 Config Provider
+     */
+    OAuth2\ConfigProvider::class,
+    /**
+     * Acl Config Provider
+     */
+    Acl\ConfigProvider::class,
+
 ], $cacheConfig['config_cache_path']);
 
 //var_dump($aggregator->getMergedConfig()); exit();

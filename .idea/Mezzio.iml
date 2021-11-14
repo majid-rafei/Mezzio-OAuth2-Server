@@ -7,6 +7,8 @@
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/test/AppTest" isTestSource="true" packagePrefix="AppTest\" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Acl/src" isTestSource="false" packagePrefix="Acl\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OAuth2/src" isTestSource="false" packagePrefix="OAuth2\" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-text-template" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-invoker" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />

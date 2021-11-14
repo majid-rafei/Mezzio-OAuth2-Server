@@ -2,15 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace Acl;
 
-use Mezzio\Authentication\AuthenticationMiddleware;
-use Mezzio\Authentication\OAuth2\AuthorizationMiddleware;
+use Acl\Handler\AclHandler;
+use Mezzio\Authentication\AuthenticationInterface;
+use Mezzio\Authentication\OAuth2\OAuth2Adapter;
 
 /**
- * The configuration provider for the App module
- *
- * @see https://docs.laminas.dev/laminas-component-installer/
+ * The configuration provider for the ACL module
  */
 class ConfigProvider
 {
@@ -32,13 +31,12 @@ class ConfigProvider
     {
         return [
             [
-                'path'            => '/logout',
-                'name'            => 'logout',
+                'path'            => '/acl',
+                'name'            => 'acl',
                 'middleware'      => [
-                    AuthenticationMiddleware::class,
-                    AuthorizationMiddleware::class,
+                    AclHandler::class
                 ],
-                'allowed_methods' => ['GET'],
+                'allowed_methods' => ['POST'],
             ],
         ];
     }
@@ -50,10 +48,13 @@ class ConfigProvider
     {
         return [
             'invokables' => [
+                Handler\AclHandler::class => Handler\AclHandler::class,
             ],
             'factories'  => [
+//                Handler\AclHandler::class => Handler\AclHandlerFactory::class,
             ],
             'aliases' => [
+                AuthenticationInterface::class => OAuth2Adapter::class,
             ],
         ];
     }

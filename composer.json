@@ -65,7 +65,9 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/App/src/"
+            "App\\": "src/App/src/",
+            "Acl\\": "src/Acl/src/",
+            "OAuth2\\": "src/OAuth2/src/"
         }
     },
     "autoload-dev": {

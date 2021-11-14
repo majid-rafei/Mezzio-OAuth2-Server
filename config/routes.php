@@ -36,7 +36,7 @@ use Mezzio\Session\SessionMiddleware;
  *     App\Handler\ContactHandler::class,
  *     Mezzio\Router\Route::HTTP_METHOD_ANY,
  *     'contact'
- * );
+ * );t
  */
 
 return static function (Application $app, MiddlewareFactory $factory, ContainerInterface $container): void {
@@ -47,5 +47,11 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
      *                      and go to the next step,
      * }
      */
-    $app->post('/oauth2/token', OAuth2\TokenEndpointHandler::class);
+//    $app->post('/oauth2/token', OAuth2\TokenEndpointHandler::class);
+
+    /**
+     * Gives user role with the given resource or all user roles if no resource provided!
+     */
+//    $app->post('/oauth2/acl', OAuth2\TokenEndpointHandler::class);
+
 };
